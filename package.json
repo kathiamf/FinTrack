@@ -1,22 +1,17 @@
 {
-  "name": "fintrack",
-  "version": "1.0.0",
-  "main": "index.ts",
-  "dependencies": {
-    "expo": "~57.0.26",
-    "expo-status-bar": "~57.0.1",
-    "react": "19.2.3",
-    "react-native": "0.86.3"
-  },
-  "devDependencies": {
-    "@types/react": "~19.2.2",
-    "typescript": "~6.0.3"
-  },
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "private": true
+"main": "expo-router/entry",
+"scripts": {
+"start": "expo start",
+"android": "expo start --android",
+"ios": "expo start --ios",
+"test": "jest",
+"typecheck": "tsc --noEmit",
+"format": "prettier --write \"app/**/*.{ts,tsx}\" \"src/**/*.{ts,tsx}\" \"__tests__/**/*.ts\""
+},
+"jest": {
+"preset": "jest-expo",
+"moduleNameMapper": {
+"^@/(.*)$": "<rootDir>/src/$1"
+}
+}
 }
