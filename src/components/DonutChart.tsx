@@ -37,7 +37,7 @@ export function DonutChart({
   return (
     <View style={{ width: size, height: size }}>
       <Svg width={size} height={size}>
-        <G rotation={-90} origin={`${center}, ${center}`}>
+        <G transform={`rotate(-90 ${center} ${center})`}>
           <Circle
             cx={center}
             cy={center}
@@ -61,7 +61,7 @@ export function DonutChart({
           ))}
         </G>
       </Svg>
-      <View style={[StyleSheet.absoluteFill, styles.center]} pointerEvents="none">
+      <View style={[StyleSheet.absoluteFill, styles.center, { pointerEvents: 'none' }]}>
         {children}
       </View>
     </View>
