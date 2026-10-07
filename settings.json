@@ -1,0 +1,8 @@
+{
+  "typescript.preferences.analyzerConfig": {},
+  "files.associations": {
+    "supabase/functions/**/*.ts": "typescript"
+  },
+  "deno.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
