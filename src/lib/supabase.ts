@@ -1,7 +1,11 @@
-import 'react-native-url-polyfill/auto';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createClient } from '@supabase/supabase-js';
-import { AppState } from 'react-native';
+import { AppState, Platform } from 'react-native';
+
+// O polyfill de URL só é necessário no celular; na web ele quebra o URL nativo.
+if (Platform.OS !== 'web') {
+  require('react-native-url-polyfill/auto');
+}
 
 const url = process.env.EXPO_PUBLIC_SUPABASE_URL;
 const key = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
